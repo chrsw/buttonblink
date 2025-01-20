@@ -27,3 +27,41 @@ arm-none-eabi-gcc -nostdlib -T stm32_ls.ld *.o -o buttonblink.elf
 ```
 
 This generates a file `buttonblink.elf`. No Standard C Library required.
+
+## Running
+To run the application connect the board to the PC and run these commands.
+
+Start OpenOCD:
+```
+openocd -f board/st_nucleo_f4.cfg
+```
+
+Start GDB in another command window:
+```
+arm-none-eabi-gdb
+```
+
+Connect to the OpenOCD server (in the GDB session):
+```
+target remote localhost:3333
+```
+
+Flash target:
+```
+monitor reset init
+monitor flash write_image erase buttonblink.elf
+```
+
+Restart target:
+```
+monitor reset init
+monitor resume
+```
+
+## Shutdown
+These commands will quit the debug session. Run these commands in the (gdb) prompt:
+```
+monitor shutdown
+disconnect
+quit
+```
