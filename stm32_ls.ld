@@ -1,3 +1,9 @@
+/* stm32_ls.ld      STM32 linker script for bare metal STM32F411 MCU
+/*                  Used to link final binary:
+ *                  arm-none-eabi-gcc -nostdlib -T stm32_ls.ld *.o -o buttonblink.elf
+ */                      
+
+
 /* Specifying the firmware's entry point */
 ENTRY(Reset_Handler)
 
@@ -20,20 +26,20 @@ SECTIONS
 	.text :
 	{
 		. = ALIGN(4); 
-		*(.isr_vector_tbl)   /* merge all .isr_vector_tbl (interrupt service routine) sections of input files */
-		*(.text)   			 /* merge all .text (application code) sections of input files */
-		*(.rodata)   	   	 /* merge all .rodata (read only data) sections of input files */
+		*(.isr_vector_tbl)    /* merge all .isr_vector_tbl (interrupt service routine) sections of input files */
+		*(.text)              /* merge all .text (application code) sections of input files */
+		*(.rodata)            /* merge all .rodata (read only data) sections of input files */
 		. = ALIGN(4);
-		_etext = .;			 /* create a global symbol to hold end of text section */
+		_etext = .;           /* create a global symbol to hold end of text section */
 	} >FLASH
 	
 	.data :
 	{
-		_sdata = .;			 /* create a global symbol to the start of data */
+		_sdata = .;           /* create a global symbol to the start of data */
 		*(.data)
 		. = ALIGN(4);
-		_edata = .;			 /* create a global symbol to hold the end of data */
-	} >SRAM AT> FLASH /* >(vma) AT> (lma) */
+		_edata = .;			  /* create a global symbol to hold the end of data */
+	} >SRAM AT> FLASH         /* >(vma) AT> (lma) */
 	
 	.bss :
 	{
