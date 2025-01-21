@@ -18,7 +18,8 @@ published by Packt in 2024.
 - Install OpenOCD https://openocd.org/pages/getting-openocd.html
   - Get xpack version
   - Add executable to Windows path
-
+  
+This should build on Linux or macOS but the installation and tool instructions will vary.
 
 ## Building
 Once all the tools are set up, compile all source files on the command prompt 
