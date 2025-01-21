@@ -11,6 +11,15 @@ published by Packt in 2024.
 - GNU Make
 - OpenOCD
 
+## Installing Requirements
+
+- Install the GNU Arm Embedded Toolchain https://developer.arm.com/downloads/-/gnu-rm
+  - Use default settings (but make sure "Add path to environment variable" is checked).
+- Install OpenOCD https://openocd.org/pages/getting-openocd.html
+  - Get xpack version
+  - Add executable to Windows path
+
+
 ## Building
 Once all the tools are set up, compile all source files on the command prompt 
 (cmd.exe) in Windows with the following commands:
