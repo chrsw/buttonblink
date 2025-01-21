@@ -5,17 +5,21 @@
 #include "core_cm4.h"
 #include "systick.h"
 #include "gpio.h"
+#include "tim.h"
 
 
 int main(void) 
 {
 	led_init();
+	tim2_1hz_init();
 
 	// toggle LED
 	while (1)
 	{
-		// delay for 500 ms using SysTick timer
-		systick_delay_msec(500);
+		// wait for timer event
+		while(!(TIM2->SR & SR_UIF)) {}
+		// clear event flag
+		TIM2->SR &= ~SR_UIF;
 		led_toggle();
 	}
 }
