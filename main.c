@@ -16,7 +16,11 @@ int main(void)
 	// set PA5 to output
 	GPIOA->MODER |= (1U<<10);
 	GPIOA->MODER &= ~(1U<<11);
-
-	// turn on LED
-	GPIOA->ODR |= LED_PIN;
+	
+	// toggle LED
+	while (1)
+	{
+		GPIOA->ODR ^= LED_PIN;
+		for (int i = 0; i < 500000; i++) {}
+	}
 }
