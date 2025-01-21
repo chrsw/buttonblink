@@ -1,4 +1,5 @@
-// main:  test file for toolchain
+// buttonblink:  	blink an LED on the NUCLEO-F411 board 
+// 					test file for toolchain
 
 #include "stm32f4xx.h"
 #include "core_cm4.h"
