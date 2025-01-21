@@ -32,6 +32,10 @@ arm-none-eabi-gcc -c -mcpu=cortex-m4 -mthumb -std=gnu11 -Iinc -g3 -DDEBUG -DNUCL
 ```
 
 ```
+arm-none-eabi-gcc -c -mcpu=cortex-m4 -mthumb -std=gnu11 -Iinc -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE systick.c -o systick.o
+```
+
+```
 arm-none-eabi-gcc -c -mcpu=cortex-m4 -mthumb -std=gnu11 stm32f411_startup.c -o stm32f411_startup.o
 ```
 
