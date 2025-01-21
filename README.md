@@ -24,7 +24,7 @@ published by Packt in 2024.
 Once all the tools are set up, compile all source files on the command prompt 
 (cmd.exe) in Windows with the following commands:
 ```
-arm-none-eabi-gcc -c -mcpu=cortex-m4 -mthumb -std=gnu11 -Iinc -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE main.c -o main.o
+arm-none-eabi-gcc -c -mcpu=cortex-m4 -mthumb -std=gnu11 -Iinc -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE buttonblink.c -o buttonblink.o
 ```
 
 ```
