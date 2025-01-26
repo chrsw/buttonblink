@@ -22,8 +22,13 @@ published by Packt in 2024.
 This should build on Linux or macOS but the installation and tool instructions will vary.
 
 ## Building
-Once all the tools are set up, compile all source files on the command prompt 
-(cmd.exe) in Windows with the following commands:
+Once all the tools are set up, compile all source files on the command prompt with this batch script foor cmd.exe in Windows:
+```
+build.bat
+```
+
+Or run each command individually:
+
 ```
 arm-none-eabi-gcc -c -mcpu=cortex-m4 -mthumb -std=gnu11 -Iinc -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE buttonblink.c -o buttonblink.o
 ```
