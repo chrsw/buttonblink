@@ -7,6 +7,7 @@
 #define CR1_CEN                 (1u<<0)
 
 
+// tim2_1hz_init:  start a 1 second timer. generate a timer event every second
 void tim2_1hz_init(void)
 {
     // enable clock access to TIM2
