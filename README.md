@@ -85,7 +85,6 @@ monitor reset init
 monitor resume
 ```
 
-## Shutdown
 These commands will quit the debug session. Run these commands in the (gdb) prompt:
 ```
 monitor shutdown
