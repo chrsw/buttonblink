@@ -1,5 +1,5 @@
 # buttonblink
-Press button to blink LED on NUCLEO-F411
+Press button to blink LED on NUCLEO-F411RE develoment board.
 
 This project is inspired _Bare Metal Embedded C Programming_ . A book 
 published by Packt in 2024.
