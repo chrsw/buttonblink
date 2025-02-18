@@ -22,7 +22,7 @@ published by Packt in 2024.
 This should build on Linux or macOS but the installation and tool instructions will vary.
 
 ## Building
-Once all the tools are set up, compile all source files on the command prompt with this batch script foor cmd.exe in Windows:
+Once all the tools are set up, compile all source files on the command prompt with this batch script for cmd.exe in Windows:
 ```
 build.bat
 ```
