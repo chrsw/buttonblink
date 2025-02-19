@@ -1,11 +1,11 @@
 # buttonblink
 Press button to blink LED on NUCLEO-F411RE develoment board.
 
-This project is inspired _Bare Metal Embedded C Programming_ . A book 
+This project is inspired by _Bare Metal Embedded C Programming_. A book written by Icon Israel Gbati and
 published by Packt in 2024.
 
 ## Requirements
-- Windows OS
+- Windows OS (TBD: macOS, Linux)
 - MinGW64 (from MSYS2)
 - GNU Arm toolchain
 - GNU Make
@@ -14,7 +14,8 @@ published by Packt in 2024.
 ## Installing Requirements
 
 - Install the GNU Arm Embedded Toolchain https://developer.arm.com/downloads/-/gnu-rm
-  - Use default settings (but make sure "Add path to environment variable" is checked).
+  - Check "Add path to environment variable" is checked
+  - For everything else, use default settings
 - Install OpenOCD https://openocd.org/pages/getting-openocd.html
   - Get xpack version
   - Add executable to Windows path
@@ -53,7 +54,7 @@ arm-none-eabi-gcc -c -mcpu=cortex-m4 -mthumb -std=gnu11 stm32f411_startup.c -o s
 arm-none-eabi-gcc -nostdlib -T stm32_ls.ld *.o -o buttonblink.elf
 ```
 
-This generates a file `buttonblink.elf`. No Standard C Library required.
+This generates a binary file `buttonblink.elf` for flashing (programming) onto the MCU. No Standard C Library required for this project, which greatlys simplifies things like not requiring the STM32CubeIDE development tool.
 
 ## Running
 To run the application connect the board to the PC and run these commands.

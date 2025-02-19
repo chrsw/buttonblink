@@ -10,6 +10,7 @@
 // tim2_1hz_init:  start a 1 second timer. generate a timer event every second
 void tim2_1hz_init(void)
 {
+    // pheripheral clocks are gated by default to save power
     // enable clock access to TIM2
     RCC->APB1ENR |= TIM2EN;
 
